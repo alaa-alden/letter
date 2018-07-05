@@ -1,0 +1,8 @@
+{
+  "assetPath": "/client",
+  "devAssets": false,
+  "domain": "localhost",
+  "environmentName": "localhost",
+  "internalPort": 8080,
+  "publicport": 8080
+}

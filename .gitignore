@@ -1,0 +1,7 @@
+/src/server/secrets/index.js
+/node_modules
+/yarn.lock
+/yarn-error.log
+/build
+/bower_components
+note.md

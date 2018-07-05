@@ -1,0 +1,27 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+        "semi": [
+            2,
+            "never"
+        ],
+        "prefer-arrow-callback": 0,
+        "comma-dangle": 0,
+        "react/jsx-filename-extension": 0,
+        "react/prefer-stateless-function": 0,
+        "react/forbid-prop-types": 0
+    },
+    "env": {
+        "node": true,
+        "browser": true,
+        "jest": true,
+        "es6": true
+    },
+     "plugins": [
+         "flowtype"
+     ],
+     "ecmaFeatures": {
+         "defaultParams": true
+     }
+}
