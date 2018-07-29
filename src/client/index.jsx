@@ -3,5 +3,5 @@ import { hydrate as render } from 'react-dom'
 import ClientApp from './clientapp'
 
 render(<ClientApp />,
-    document.getElementById('app')
+  document.getElementById('app')
 )

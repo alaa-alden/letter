@@ -78,9 +78,9 @@ defaultConfig.plugins.push(
 )
 defaultConfig.plugins.push(
   new ExtractTextPlugin({ filename: `[name].${version}.bundle.css`, allChunks: true, ignoreOrder: true }),
-  new CopyWebpackPlugin(
-    [{ from: '../src/assets/favicons/', to: '../../build/client/favicons' }]
-  )
+  // new CopyWebpackPlugin(
+  //   [{ from: '../src/assets/favicons/', to: '../../build/client/favicons' }]
+  // )
 )
 defaultConfig.target = 'web'
 defaultConfig.devtool = 'source-map'

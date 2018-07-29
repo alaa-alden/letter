@@ -1,5 +1,11 @@
-import Home from './home'
+import Home from './home/'
+import Game from './game'
+import Login from './login'
+import Register from './register'
 
 export {
-  Home
+  Home,
+  Game,
+  Login,
+  Register
 }

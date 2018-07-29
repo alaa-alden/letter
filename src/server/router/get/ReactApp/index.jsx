@@ -9,7 +9,6 @@ import createStore from '../../../../shared/store'
 import { App } from '../../../../shared/components'
 import template from '../template'
 
-
 function reactRouteHandler(req, res) {
   // for redux
   const store = createStore

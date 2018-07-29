@@ -1,20 +1,25 @@
 import path from 'path'
 // import CopyWebpackPlugin from 'copy-webpack-plugin'
-import pkg, { version } from '../../package.json'
+import pkg, {
+  version
+} from '../../package.json'
 
 const sourcePath = path.join(__dirname, '../../src')
 const staticsPath = path.join(__dirname, '../../build/client')
 const defaultConfig = {
   context: sourcePath,
   entry: {
-    app: './client/index.js',
-    polyfills: './client/polyfills.js'
+    app: './client/index',
+    polyfills: './client/polyfills'
   },
   output: {
     path: staticsPath,
     filename: `[name].${version}.bundle.js`,
     libraryTarget: 'umd',
     publicPath: '/client/'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: []
@@ -31,7 +36,9 @@ const defaultJsRule = {
   query: {
     presets: [
       // we need to disabe modules in order to get tree shaking to work
-      ['env', { modules: false }],
+      ['env', {
+        modules: false
+      }],
       'stage-1',
       'react'
     ]
@@ -58,5 +65,9 @@ const defaultImageRule = {
     'file-loader'
   ]
 }
-export { defaultConfig, defaultJsRule, defaultCssRule, defaultImageRule }
-
+export {
+  defaultConfig,
+  defaultJsRule,
+  defaultCssRule,
+  defaultImageRule
+}

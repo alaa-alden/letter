@@ -12,7 +12,7 @@ if (!useWebpackDevServer) {
 export default function renderHtml(helmet, reactApp, state) {
   return (`
     <!DOCTYPE html>
-        <html>
+        <html style='height:100%'>
         <head>
             ${cssFile}
            ${helmet.title.toString()}
@@ -20,23 +20,23 @@ export default function renderHtml(helmet, reactApp, state) {
             ${helmet.link.toString()}
             <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
             <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
         </head>
-        <body>
-            <div id="app">${reactApp}</div>
+        <body style='height:100%'>
+            <div id="app" style='height:100%'>${reactApp}</div>
             <script>
               window.clientState = {
                   state: ${JSON.stringify(state)}
               }
             </script>
-<script>
-      if(!window.Promise || !window.Symbol) {
-        document.write('<script src="${config.assetPath}/polyfills.${version}.bundle.js"><\\/script>')
-      }
-    </script>
+              <script>
+                if(!window.Promise || !window.Symbol) {
+                  document.write('<script src="${config.assetPath}/polyfills.${version}.bundle.js"><\\/script>')
+                }
+              </script>
+              <script src="jquery/dist/jquery.min.js"></script>
+              <script src="bootstrap/dist/js/bootstrap.min.js"></script>
               <script src="${config.assetPath}/app.${version}.bundle.js" defer></script>
-                <script src="jquery/dist/jquery.min.js"></script>
-            <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-
             </body>
         </html>
         `)

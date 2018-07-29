@@ -1,4 +1,5 @@
 /src/server/secrets/index.js
+/src/shared/container/login/secret/index.json
 /node_modules
 /yarn.lock
 /yarn-error.log

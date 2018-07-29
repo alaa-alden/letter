@@ -1,4 +1,13 @@
-import SetUntitle from './untitle'
+import {
+  SetLevel as SetGameLevel
+} from './game'
+import {
+  SetUser,
+  DeleteUser
+} from './user'
 
-const empty = {}
-export { SetUntitle, empty }
+export {
+  SetGameLevel,
+  SetUser,
+  DeleteUser
+}

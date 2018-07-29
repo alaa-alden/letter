@@ -1,0 +1,19 @@
+.nav {
+  grid-area: nav;
+  font-family: 'aril';
+  color: #fff;
+  text-align: center;
+  background: #ccc;
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'logo . login_user';
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.login_user {
+  grid-area: login_user;
+}

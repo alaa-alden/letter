@@ -1,0 +1,8 @@
+{
+  "execMap": {
+    "js": "node",
+    "jsx": "jsx {{filename}} | node"
+  },
+  "ext": "js jsx scss css",
+  "verbose": true
+}

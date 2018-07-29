@@ -31,10 +31,6 @@ function loadConfig(configPath, logError = true) {
  */
 function getConfig() {
   const defaultConfig = loadConfig('./config/config.default.json')
-
-  console.log('defaultConfig:')
-  console.log(defaultConfig)
-
   const envConfig = {}
   Object.keys(defaultConfig).forEach((key) => {
     const value = process.env[`${environmentVariablePrepend}${key}`]
